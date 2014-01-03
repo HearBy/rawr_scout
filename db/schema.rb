@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140103022429) do
+ActiveRecord::Schema.define(:version => 20140103155147) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -47,17 +47,35 @@ ActiveRecord::Schema.define(:version => 20140103022429) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
+  create_table "garments", :force => true do |t|
+    t.string   "name"
+    t.string   "brand"
+    t.string   "fabric_origin"
+    t.string   "made_in"
+    t.decimal  "price"
+    t.decimal  "denim_weight",  :precision => 5, :scale => 2
+    t.string   "color"
+    t.string   "fit"
+    t.boolean  "sanforized"
+    t.boolean  "stretch"
+    t.boolean  "selvedge"
+    t.string   "url"
+    t.text     "photo_url"
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
+  end
+
   create_table "items", :force => true do |t|
     t.integer  "tag_size"
-    t.decimal  "waist"
-    t.decimal  "front_rise"
-    t.decimal  "thigh"
-    t.decimal  "knee"
-    t.decimal  "leg_opening"
-    t.decimal  "inseam"
+    t.decimal  "waist",       :precision => 5, :scale => 3
+    t.decimal  "front_rise",  :precision => 5, :scale => 3
+    t.decimal  "thigh",       :precision => 5, :scale => 3
+    t.decimal  "knee",        :precision => 5, :scale => 3
+    t.decimal  "leg_opening", :precision => 5, :scale => 3
+    t.decimal  "inseam",      :precision => 5, :scale => 1
     t.integer  "garment_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
   end
 
 end
