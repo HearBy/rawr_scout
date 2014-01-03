@@ -4,9 +4,10 @@ gem 'rails', '3.2.16'
 gem 'pg'
 
 gem 'jquery-ui-rails'
+gem 'jquery-rails'
 gem 'activeadmin'
 gem "meta_search",    '>= 1.1.0.pre'
-gem 'jquery-rails'
+gem "cancan"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
