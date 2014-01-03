@@ -13,6 +13,7 @@ ActiveAdmin.register Item do
       f.input :knee
       f.input :leg_opening
       f.input :inseam
+      f.input :admin_user_id, :as => :hidden, :value => current_active_admin_user.id
     end
     f.actions
   end
@@ -23,6 +24,8 @@ ActiveAdmin.register Item do
     end
   end
   
+  filter :approval, :as => :select, collection: [true, false]
+  filter :admin_user_email, :as => :select, collection: AdminUser.all.map(&:email).uniq.sort_by{|e| e}
   filter :garment
   filter :garment_brand, :as => :select, collection: Garment.all.map(&:brand).uniq.sort_by{|e| e}
   filter :tag_size
@@ -37,6 +40,8 @@ ActiveAdmin.register Item do
       link_to item.tag_size, [:admin, item]
     end
     column "True Waist", :waist
+    column :approval
+    column :admin_user
     default_actions
   end
 
