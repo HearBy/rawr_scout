@@ -16,7 +16,8 @@ def make_items
 				   thigh: 10.7,
 				   knee: 8.2,
 				   leg_opening: 7.3,
-				   inseam: 37)
+				   inseam: 37,
+				   approval: true)
 
 	#size 29
 		Item.create!(garment_id:1,
@@ -26,7 +27,8 @@ def make_items
 				   thigh: 11.0,
 				   knee: 8.3,
 				   leg_opening: 7.5,
-					inseam: 37)
+					inseam: 37,
+					approval: true)
 
 	#size 30
 		Item.create!(waist: 31,
@@ -35,6 +37,7 @@ def make_items
 				   knee: 8.3,
 				   leg_opening: 7.7,
 				   inseam: 37,
+				   approval: true,
 				   tag_size: 30,
 				   garment_id:1,)
 
@@ -46,7 +49,8 @@ def make_items
 				   thigh: 11.3,
 				   knee: 8.4,
 				   leg_opening: 7.8,
-					inseam: 37)
+					inseam: 37,
+					approval: true)
 
 	#size 32
 		Item.create!(garment_id:1,
@@ -56,7 +60,8 @@ def make_items
 				   thigh: 11.7,
 				   knee: 8.7,
 				   leg_opening: 7.9,
-					inseam: 37)
+					inseam: 37,
+					approval: true)
 
 	#size 33
 		Item.create!(garment_id:1,
@@ -66,7 +71,8 @@ def make_items
 				   thigh: 12,
 				   knee: 8.8,
 				   leg_opening: 8,
-					inseam: 37)
+					inseam: 37,
+					approval: true)
 
 	#size 34
 		Item.create!(garment_id:1,
@@ -76,7 +82,8 @@ def make_items
 				   thigh: 12.3,
 				   knee: 9.1,
 				   leg_opening: 8.2,
-					inseam: 37)
+					inseam: 37,
+					approval: true)
 
 	#size 36
 		Item.create!(garment_id:1,
@@ -86,7 +93,8 @@ def make_items
 				   thigh: 12.7,
 				   knee: 9.5,
 				   leg_opening: 8.6,
-					inseam: 37)
+					inseam: 37,
+					approval: true)
 
 	#size 38
 		Item.create!(garment_id:1,
@@ -96,7 +104,8 @@ def make_items
 				   thigh: 13,
 				   knee: 9.5,
 				   leg_opening: 9,
-					inseam: 37)
+					inseam: 37,
+					approval: true)
 
 	#size 40
 		Item.create!(garment_id:1,
@@ -106,7 +115,8 @@ def make_items
 				   thigh: 14,
 				   knee: 9.8,
 				   leg_opening: 9.1,
-					inseam: 37)
+					inseam: 37,
+					approval: true)
 
 #2 3sixteen ST-100x
 
@@ -118,7 +128,8 @@ def make_items
 					thigh: 10.15,
 					knee: 7.25,
 					leg_opening: 7,
-					inseam: 37)
+					inseam: 37,
+					approval: true)
 
 	#size 29
 		Item.create!(garment_id: 2,
@@ -128,7 +139,8 @@ def make_items
 					thigh: 10.5,
 					knee: 7.5,
 					leg_opening: 7.15,
-					inseam: 37)
+					inseam: 37,
+					approval: true)
 
 	#size 30
 		Item.create!(garment_id: 2,
@@ -138,7 +150,8 @@ def make_items
 					thigh: 11,
 					knee: 7.75,
 					leg_opening: 7.25,
-					inseam: 37)
+					inseam: 37,
+					approval: true)
 
 	#size 31
 		Item.create!(garment_id: 2,
@@ -148,7 +161,8 @@ def make_items
 					thigh: 11.25,
 					knee: 8,
 					leg_opening: 7.4,
-					inseam: 37)
+					inseam: 37,
+					approval: true)
 
 	#size 32
 		Item.create!(garment_id: 2,
@@ -158,7 +172,8 @@ def make_items
 					thigh: 11.5,
 					knee: 8,
 					leg_opening: 7.5,
-					inseam: 37)
+					inseam: 37,
+					approval: true)
 
 	#size 33
 		Item.create!(garment_id: 2,
@@ -168,7 +183,8 @@ def make_items
 					thigh: 11.5,
 					knee: 8,
 					leg_opening: 7.65,
-					inseam: 37)
+					inseam: 37,
+					approval: true)
 
 	#size 34
 		Item.create!(garment_id: 2,
@@ -178,7 +194,8 @@ def make_items
 					thigh: 12,
 					knee: 8.25,
 					leg_opening: 7.75,
-					inseam: 37)
+					inseam: 37,
+					approval: true)
 
 	#size 36
 		Item.create!(garment_id: 2,
@@ -188,7 +205,8 @@ def make_items
 					thigh: 12.5,
 					knee: 8.7,
 					leg_opening: 8,
-					inseam: 37)
+					inseam: 37,
+					approval: true)
 
 #3 Rogue Territory Stanton
 	#size 26
@@ -199,7 +217,8 @@ def make_items
 				   thigh: 10.5,
 				   knee: 7,
 				   leg_opening: 6.5,
-				   inseam: 36)
+				   inseam: 36,
+				   approval: true)
 
 	#size 27
 		Item.create!(garment_id: 3,
@@ -209,7 +228,8 @@ def make_items
 				   thigh: 11,
 				   knee: 7.25,
 				   leg_opening: 6.75,
-				   inseam: 36)
+				   inseam: 36,
+				   approval: true)
 
 	#size 28
 		Item.create!(garment_id: 3,
@@ -219,7 +239,8 @@ def make_items
 				   thigh: 11.25,
 				   knee: 7.5,
 				   leg_opening: 7,
-				   inseam: 36)
+				   inseam: 36,
+				   approval: true)
 
 	#size 29
 		Item.create!(garment_id: 3,
@@ -229,7 +250,8 @@ def make_items
 				   thigh: 11.5,
 				   knee: 8,
 				   leg_opening: 7.5,
-				   inseam: 36)
+				   inseam: 36,
+				   approval: true)
 
 	#size 30
 		Item.create!(garment_id: 3,
@@ -239,7 +261,8 @@ def make_items
 				   thigh: 11.75,
 				   knee: 8.25,
 				   leg_opening: 7.75,
-				   inseam: 36)
+				   inseam: 36,
+				   approval: true)
 
 	#size 31
 		Item.create!(garment_id: 3,
@@ -249,7 +272,8 @@ def make_items
 				   thigh: 12,
 				   knee: 8.5,
 				   leg_opening: 8,
-				   inseam: 36)
+				   inseam: 36,
+				   approval: true)
 
 	#size 32
 		Item.create!(garment_id: 3,
@@ -259,7 +283,8 @@ def make_items
 				   thigh: 12.5,
 				   knee: 8.75,
 				   leg_opening: 8.25,
-				   inseam: 36)
+				   inseam: 36,
+				   approval: true)
 
 	#size 33
 		Item.create!(garment_id: 3,
@@ -269,7 +294,8 @@ def make_items
 				   thigh: 12.75,
 				   knee: 9,
 				   leg_opening: 8.5,
-				   inseam: 36)
+				   inseam: 36,
+				   approval: true)
 
 	#size 34
 		Item.create!(garment_id: 3,
@@ -279,7 +305,8 @@ def make_items
 				   thigh: 13,
 				   knee: 9.25,
 				   leg_opening: 8.75,
-				   inseam: 36)
+				   inseam: 36,
+				   approval: true)
 
 	#size 36
 		Item.create!(garment_id: 3,
@@ -289,7 +316,8 @@ def make_items
 				   thigh: 13.5,
 				   knee: 9.75,
 				   leg_opening: 9,
-				   inseam: 36)
+				   inseam: 36,
+				   approval: true)
 
 	#size 38
 		Item.create!(garment_id: 3,
@@ -299,7 +327,8 @@ def make_items
 				   thigh: 15,
 				   knee: 10,
 				   leg_opening: 9.25,
-				   inseam: 36)
+				   inseam: 36,
+				   approval: true)
 
 #4 N&F x Big John x Rockin' Jelly Bean
 	#size 28
@@ -310,7 +339,8 @@ def make_items
 				   thigh: 9.75,
 				   knee: 7.5,
 				   leg_opening: 6,
-				   inseam: 34)
+				   inseam: 34,
+				   approval: true)
 
 	#size 29
 		Item.create!(garment_id: 4,
@@ -320,7 +350,8 @@ def make_items
 				   thigh: 10.25,
 				   knee: 7.75,
 				   leg_opening: 6.5,
-				   inseam: 34)
+				   inseam: 34,
+				   approval: true)
 
 	#size 30
 		Item.create!(garment_id: 4,
@@ -330,7 +361,8 @@ def make_items
 				   thigh: 10.5,
 				   knee: 8,
 				   leg_opening: 6.5,
-				   inseam: 34)
+				   inseam: 34,
+				   approval: true)
 
 	#size 31
 		Item.create!(garment_id: 4,
@@ -340,7 +372,8 @@ def make_items
 				   thigh: 10.5,
 				   knee: 8.15,
 				   leg_opening: 6.75,
-				   inseam: 34)
+				   inseam: 34,
+				   approval: true)
 
 	#size 32
 		Item.create!(garment_id: 4,
@@ -350,7 +383,8 @@ def make_items
 				   thigh: 10.75,
 				   knee: 8.25,
 				   leg_opening: 7,
-				   inseam: 34)
+				   inseam: 34,
+				   approval: true)
 
 	#size 33
 		Item.create!(garment_id: 4,
@@ -360,7 +394,8 @@ def make_items
 				   thigh: 11.15,
 				   knee: 8.5,
 				   leg_opening: 7,
-				   inseam: 34)
+				   inseam: 34,
+				   approval: true)
 
 	#size 34
 		Item.create!(garment_id: 4,
@@ -370,7 +405,8 @@ def make_items
 				   thigh: 11.5,
 				   knee: 8.75,
 				   leg_opening: 7.25,
-				   inseam: 34)
+				   inseam: 34,
+				   approval: true)
 
 	#size 36
 		Item.create!(garment_id: 4,
@@ -380,7 +416,8 @@ def make_items
 				   thigh: 12,
 				   knee: 9.25,
 				   leg_opening: 7.75,
-				   inseam: 34)
+				   inseam: 34,
+				   approval: true)
 
 #5 APC New Standard
 	#size 25
@@ -391,7 +428,8 @@ def make_items
 				   thigh: 9.5,
 				   knee: 7,
 				   leg_opening: 6.5,
-				   inseam: 33.5)
+				   inseam: 33.5,
+				   approval: true)
 
 	#size 26
 		Item.create!(garment_id: 5,
@@ -401,7 +439,8 @@ def make_items
 				   thigh: 10,
 				   knee: 7.5,
 				   leg_opening: 7,
-				   inseam: 33.5)
+				   inseam: 33.5,
+				   approval: true)
 
 	#size 27
 		Item.create!(garment_id: 5,
@@ -411,7 +450,8 @@ def make_items
 				   thigh: 10,
 				   knee: 7.5,
 				   leg_opening: 7,
-				   inseam: 33.5)
+				   inseam: 33.5,
+				   approval: true)
 
 	#size 28
 		Item.create!(garment_id: 5,
@@ -421,7 +461,8 @@ def make_items
 				   thigh: 10,
 				   knee: 7.5,
 				   leg_opening: 7,
-				   inseam: 33.5)
+				   inseam: 33.5,
+				   approval: true)
 
 	#size 29
 		Item.create!(garment_id: 5,
@@ -431,7 +472,8 @@ def make_items
 				   thigh: 11,
 				   knee: 8,
 				   leg_opening: 7.5,
-				   inseam: 33.5)
+				   inseam: 33.5,
+				   approval: true)
 
 	#size 30
 		Item.create!(garment_id: 5,
@@ -441,7 +483,8 @@ def make_items
 				   thigh: 11,
 				   knee: 8,
 				   leg_opening: 7.5,
-				   inseam: 34.5)
+				   inseam: 34.5,
+				   approval: true)
 
 	#size 31
 		Item.create!(garment_id: 5,
@@ -451,7 +494,8 @@ def make_items
 				   thigh: 11.5,
 				   knee: 8.5,
 				   leg_opening: 8,
-				   inseam: 35.5)
+				   inseam: 35.5,
+				   approval: true)
 
 	#size 32
 		Item.create!(garment_id: 5,
@@ -461,7 +505,8 @@ def make_items
 				   thigh: 11.5,
 				   knee: 8.5,
 				   leg_opening: 8,
-				   inseam: 35.5)
+				   inseam: 35.5,
+				   approval: true)
 
 	#size 33
 		Item.create!(garment_id: 5,
@@ -471,7 +516,8 @@ def make_items
 				   thigh: 12,
 				   knee: 9,
 				   leg_opening: 8.5,
-				   inseam: 36)
+				   inseam: 36,
+				   approval: true)
 
 	#size 34
 		Item.create!(garment_id: 5,
@@ -481,7 +527,8 @@ def make_items
 				   thigh: 12,
 				   knee: 9,
 				   leg_opening: 8.5,
-				   inseam: 36)
+				   inseam: 36,
+				   approval: true)
 
 	#size 35
 		Item.create!(garment_id: 5,
@@ -491,7 +538,8 @@ def make_items
 				   thigh: 12.5,
 				   knee: 9.5,
 				   leg_opening: 9,
-				   inseam: 36)
+				   inseam: 36,
+				   approval: true)
 
 	#size 36
 		Item.create!(garment_id: 5,
@@ -501,7 +549,8 @@ def make_items
 				   thigh: 12.5,
 				   knee: 9.5,
 				   leg_opening: 9,
-				   inseam: 36.5)
+				   inseam: 36.5,
+				   approval: true)
 
 #6 APC Petit Standard
 	#size 25
@@ -512,7 +561,8 @@ def make_items
 				   thigh: 9.5,
 				   knee: 6.5,
 				   leg_opening: 6,
-				   inseam: 33)
+				   inseam: 33,
+				   approval: true)
 
 	#size 26
 		Item.create!(garment_id: 6,
@@ -522,7 +572,8 @@ def make_items
 				   thigh: 10,
 				   knee: 6.5,
 				   leg_opening: 6,
-				   inseam: 33)
+				   inseam: 33,
+				   approval: true)
 
 	#size 27
 		Item.create!(garment_id: 6,
@@ -532,7 +583,8 @@ def make_items
 				   thigh: 10,
 				   knee: 7,
 				   leg_opening: 6,
-				   inseam: 33)
+				   inseam: 33,
+				   approval: true)
 
 	#size 28
 		Item.create!(garment_id: 6,
@@ -542,7 +594,8 @@ def make_items
 				   thigh: 10.5,
 				   knee: 7.5,
 				   leg_opening: 6.5,
-				   inseam: 33)
+				   inseam: 33,
+				   approval: true)
 
 	#size 29
 		Item.create!(garment_id: 6,
@@ -552,7 +605,8 @@ def make_items
 				   thigh: 10.5,
 				   knee: 7.5,
 				   leg_opening: 6.5,
-				   inseam: 33.5)
+				   inseam: 33.5,
+				   approval: true)
 
 	#size 30
 		Item.create!(garment_id: 6,
@@ -562,7 +616,8 @@ def make_items
 				   thigh: 10.5,
 				   knee: 7.5,
 				   leg_opening: 6.5,
-				   inseam: 33.5)
+				   inseam: 33.5,
+				   approval: true)
 
 	#size 31
 		Item.create!(garment_id: 6,
@@ -572,7 +627,8 @@ def make_items
 				   thigh: 11,
 				   knee: 8,
 				   leg_opening: 7,
-				   inseam: 33.5)
+				   inseam: 33.5,
+				   approval: true)
 
 	#size 32
 		Item.create!(garment_id: 6,
@@ -582,7 +638,8 @@ def make_items
 				   thigh: 11.5,
 				   knee: 8,
 				   leg_opening: 7,
-				   inseam: 34)
+				   inseam: 34,
+				   approval: true)
 
 	#size 33
 		Item.create!(garment_id: 6,
@@ -592,7 +649,8 @@ def make_items
 				   thigh: 12,
 				   knee: 8.5,
 				   leg_opening: 7.5,
-				   inseam: 34)
+				   inseam: 34,
+				   approval: true)
 
 #7 APC Rescue
 	#size 28
@@ -603,7 +661,8 @@ def make_items
 				   thigh: 11,
 				   knee: 8,
 				   leg_opening: 8,
-				   inseam: 33.5)
+				   inseam: 33.5,
+				   approval: true)
 
 	#size 29
 		Item.create!(garment_id: 7,
@@ -613,7 +672,8 @@ def make_items
 				   thigh: 11.5,
 				   knee: 8,
 				   leg_opening: 8,
-				   inseam: 33.5)
+				   inseam: 33.5,
+				   approval: true)
 
 	#size 30
 		Item.create!(garment_id: 7,
@@ -623,7 +683,8 @@ def make_items
 				   thigh: 11.5,
 				   knee: 8.5,
 				   leg_opening: 8.5,
-				   inseam: 34)
+				   inseam: 34,
+				   approval: true)
 
 	#size 31
 		Item.create!(garment_id: 7,
@@ -633,7 +694,8 @@ def make_items
 				   thigh: 12,
 				   knee: 8.5,
 				   leg_opening: 8.5,
-				   inseam: 34)
+				   inseam: 34,
+				   approval: true)
 
 	#size 32
 		Item.create!(garment_id: 7,
@@ -643,7 +705,8 @@ def make_items
 				   thigh: 12,
 				   knee: 9,
 				   leg_opening: 9,
-				   inseam: 34)
+				   inseam: 34,
+				   approval: true)
 
 	#size 33
 		Item.create!(garment_id: 7,
@@ -653,7 +716,8 @@ def make_items
 				   thigh: 12,
 				   knee: 9,
 				   leg_opening: 9,
-				   inseam: 34)
+				   inseam: 34,
+				   approval: true)
 
 	#size 34
 		Item.create!(garment_id: 7,
@@ -663,7 +727,8 @@ def make_items
 				   thigh: 12.5,
 				   knee: 9.5,
 				   leg_opening: 9.5,
-				   inseam: 34.5)
+				   inseam: 34.5,
+				   approval: true)
 
 	#size 35
 		Item.create!(garment_id: 7,
@@ -673,7 +738,8 @@ def make_items
 				   thigh: 13,
 				   knee: 9.5,
 				   leg_opening: 9.5,
-				   inseam: 35)
+				   inseam: 35,
+				   approval: true)
 	
 	#size 36
 		Item.create!(garment_id: 7,
@@ -683,7 +749,8 @@ def make_items
 				   thigh: 13,
 				   knee: 10,
 				   leg_opening: 10,
-				   inseam: 35)
+				   inseam: 35,
+				   approval: true)
 
 #8 APC Petit New Standard
 	#size 25
@@ -694,7 +761,8 @@ def make_items
 				   thigh: 9.5,
 				   knee: 6.75,
 				   leg_opening: 6.25,
-				   inseam: 32.5)
+				   inseam: 32.5,
+				   approval: true)
 
 	#size 26
 		Item.create!(garment_id: 8,
@@ -704,7 +772,8 @@ def make_items
 				   thigh: 10,
 				   knee: 7,
 				   leg_opening: 6.5,
-				   inseam: 32.5)
+				   inseam: 32.5,
+				   approval: true)
 
 	#size 27
 		Item.create!(garment_id: 8,
@@ -714,7 +783,8 @@ def make_items
 				   thigh: 10.25,
 				   knee: 7,
 				   leg_opening: 6.5,
-				   inseam: 32.5)
+				   inseam: 32.5,
+				   approval: true)
 
 	#size 28
 		Item.create!(garment_id: 8,
@@ -724,7 +794,8 @@ def make_items
 				   thigh: 10.75,
 				   knee: 7.5,
 				   leg_opening: 6.5,
-				   inseam: 32.5)
+				   inseam: 32.5,
+				   approval: true)
 
 	#size 29
 		Item.create!(garment_id: 8,
@@ -734,7 +805,8 @@ def make_items
 				   thigh: 11,
 				   knee: 7.5,
 				   leg_opening: 6.5,
-				   inseam: 32.5)
+				   inseam: 32.5,
+				   approval: true)
 
 	#size 30
 		Item.create!(garment_id: 8,
@@ -744,7 +816,8 @@ def make_items
 				   thigh: 11,
 				   knee: 7.75,
 				   leg_opening: 6.75,
-				   inseam: 33.5)
+				   inseam: 33.5,
+				   approval: true)
 
 	#size 31
 		Item.create!(garment_id: 8,
@@ -754,7 +827,8 @@ def make_items
 				   thigh: 11.25,
 				   knee: 8,
 				   leg_opening: 6.75,
-				   inseam: 33.5)
+				   inseam: 33.5,
+				   approval: true)
 
 	#size 32
 		Item.create!(garment_id: 8,
@@ -764,7 +838,8 @@ def make_items
 				   thigh: 11.5,
 				   knee: 8.25,
 				   leg_opening: 7,
-				   inseam: 33.5)
+				   inseam: 33.5,
+				   approval: true)
 
 	#size 33
 		Item.create!(garment_id: 8,
@@ -774,7 +849,8 @@ def make_items
 				   thigh: 11.75,
 				   knee: 8.5,
 				   leg_opening: 7.5,
-				   inseam: 33.5)
+				   inseam: 33.5,
+				   approval: true)
 
 	#size 34
 		Item.create!(garment_id: 8,
@@ -784,7 +860,8 @@ def make_items
 				   thigh: 12.25,
 				   knee: 8.75,
 				   leg_opening: 7.5,
-				   inseam: 33.5)
+				   inseam: 33.5,
+				   approval: true)
 
 #9 APC New Cure
 	#size 25
@@ -795,7 +872,8 @@ def make_items
 				   thigh: 9.5,
 				   knee: 6.5,
 				   leg_opening: 6.5,
-				   inseam: 33.5)
+				   inseam: 33.5,
+				   approval: true)
 
 	#size 26
 		Item.create!(garment_id: 9,
@@ -805,7 +883,8 @@ def make_items
 				   thigh: 9.5,
 				   knee: 6.5,
 				   leg_opening: 6.5,
-				   inseam: 33.5)
+				   inseam: 33.5,
+				   approval: true)
 
 	#size 27
 		Item.create!(garment_id: 9,
@@ -815,7 +894,8 @@ def make_items
 				   thigh: 10,
 				   knee: 6.5,
 				   leg_opening: 6.5,
-				   inseam: 33.5)
+				   inseam: 33.5,
+				   approval: true)
 
 	#size 28
 		Item.create!(garment_id: 9,
@@ -825,7 +905,8 @@ def make_items
 				   thigh: 10.5,
 				   knee: 7,
 				   leg_opening: 7,
-				   inseam: 33.5)
+				   inseam: 33.5,
+				   approval: true)
 
 	#size 29
 		Item.create!(garment_id: 9,
@@ -835,7 +916,8 @@ def make_items
 				   thigh: 10.5,
 				   knee: 7,
 				   leg_opening: 7,
-				   inseam: 33.5)
+				   inseam: 33.5,
+				   approval: true)
 
 	#size 30
 		Item.create!(garment_id: 9,
@@ -845,7 +927,8 @@ def make_items
 				   thigh: 10.5,
 				   knee: 7.5,
 				   leg_opening: 7.5,
-				   inseam: 34)
+				   inseam: 34,
+				   approval: true)
 
 	#size 31
 		Item.create!(garment_id: 9,
@@ -855,7 +938,8 @@ def make_items
 				   thigh: 11,
 				   knee: 7.5,
 				   leg_opening: 7.5,
-				   inseam: 35)
+				   inseam: 35,
+				   approval: true)
 
 	#size 32
 		Item.create!(garment_id: 9,
@@ -865,7 +949,8 @@ def make_items
 				   thigh: 11,
 				   knee: 8,
 				   leg_opening: 8,
-				   inseam: 35.5)
+				   inseam: 35.5,
+				   approval: true)
 
 	#size 33
 		Item.create!(garment_id: 9,
@@ -875,7 +960,8 @@ def make_items
 				   thigh: 11.5,
 				   knee: 8,
 				   leg_opening: 8,
-				   inseam: 36)
+				   inseam: 36,
+				   approval: true)
 
 #10 Unbranded 101
 	#size 29
@@ -886,7 +972,8 @@ def make_items
 				   thigh: 10.5,
 				   knee: 7.5,
 				   leg_opening: 7,
-				   inseam: 36.5)
+				   inseam: 36.5,
+				   approval: true)
 
 	#size 30
 		Item.create!(garment_id: 10,
@@ -896,7 +983,8 @@ def make_items
 				   thigh: 10.75,
 				   knee: 7.75,
 				   leg_opening: 7.1,
-				   inseam: 36.5)
+				   inseam: 36.5,
+				   approval: true)
 
 	#size 31
 		Item.create!(garment_id: 10,
@@ -906,7 +994,8 @@ def make_items
 				   thigh: 11,
 				   knee: 8,
 				   leg_opening: 7.25,
-				   inseam: 36.5)
+				   inseam: 36.5,
+				   approval: true)
 
 	#size 32
 		Item.create!(garment_id: 10,
@@ -916,7 +1005,8 @@ def make_items
 				   thigh: 11,
 				   knee: 8.25,
 				   leg_opening: 7.25,
-				   inseam: 36.5)
+				   inseam: 36.5,
+				   approval: true)
 
 	#size 33
 		Item.create!(garment_id: 10,
@@ -926,7 +1016,8 @@ def make_items
 				   thigh: 11.3,
 				   knee: 8.5,
 				   leg_opening: 7.25,
-				   inseam: 36.5)
+				   inseam: 36.5,
+				   approval: true)
 
 	#size 34
 		Item.create!(garment_id: 10,
@@ -936,7 +1027,8 @@ def make_items
 				   thigh: 11.5,
 				   knee: 8.5,
 				   leg_opening: 7.5,
-				   inseam: 36.5)
+				   inseam: 36.5,
+				   approval: true)
 
 	#size 36
 		Item.create!(garment_id: 10,
@@ -946,7 +1038,8 @@ def make_items
 				   thigh: 12,
 				   knee: 9,
 				   leg_opening: 8,
-				   inseam: 36.5)
+				   inseam: 36.5,
+				   approval: true)
 
 #11 Unbranded 201
 
@@ -958,7 +1051,8 @@ def make_items
 				   thigh: 10.5,
 				   knee: 7.5,
 				   leg_opening: 7,
-				   inseam: 34.5)
+				   inseam: 34.5,
+				   approval: true)
 
 	#size 29
 		Item.create!(garment_id: 11,
@@ -968,7 +1062,8 @@ def make_items
 				   thigh: 10.8,
 				   knee: 7.75,
 				   leg_opening: 7,
-				   inseam: 34.5)
+				   inseam: 34.5,
+				   approval: true)
 
 	#size 30
 		Item.create!(garment_id: 11,
@@ -978,7 +1073,8 @@ def make_items
 				   thigh: 11,
 				   knee: 7.9,
 				   leg_opening: 7.25,
-				   inseam: 34.5)
+				   inseam: 34.5,
+				   approval: true)
 
 	#size 31
 		Item.create!(garment_id: 11,
@@ -988,7 +1084,8 @@ def make_items
 				   thigh: 11.5,
 				   knee: 8.25,
 				   leg_opening: 7.4,
-				   inseam: 34.5)
+				   inseam: 34.5,
+				   approval: true)
 
 	#size 32
 		Item.create!(garment_id: 11,
@@ -998,7 +1095,8 @@ def make_items
 				   thigh: 11.8,
 				   knee: 8.4,
 				   leg_opening: 7.6,
-				   inseam: 34.5)
+				   inseam: 34.5,
+				   approval: true)
 
 	#size 33
 		Item.create!(garment_id: 11,
@@ -1008,7 +1106,8 @@ def make_items
 				   thigh: 12,
 				   knee: 8.5,
 				   leg_opening: 7.7,
-				   inseam: 34.5)
+				   inseam: 34.5,
+				   approval: true)
 
 	#size 34
 		Item.create!(garment_id: 11,
@@ -1018,7 +1117,8 @@ def make_items
 				   thigh: 12.5,
 				   knee: 8.75,
 				   leg_opening: 7.8,
-				   inseam: 34.5	)
+				   inseam: 34.5	,
+				   approval: true)
 
 	#size 36
 		Item.create!(garment_id: 11,
@@ -1028,7 +1128,8 @@ def make_items
 				   thigh: 12.75,
 				   knee: 9.25,
 				   leg_opening: 7.9,
-				   inseam: 34.5)
+				   inseam: 34.5,
+				   approval: true)
 
 #12 Unbranded 301
 	#size 30
@@ -1039,7 +1140,8 @@ def make_items
 				   thigh: 11.5,
 				   knee: 8.3,
 				   leg_opening: 8.2,
-				   inseam: 34)
+				   inseam: 34,
+				   approval: true)
 
 	#size 31
 		Item.create!(garment_id: 12,
@@ -1049,7 +1151,8 @@ def make_items
 				   thigh: 11.5,
 				   knee: 8.4,
 				   leg_opening: 8.4,
-				   inseam: 34)
+				   inseam: 34,
+				   approval: true)
 
 	#size 32
 		Item.create!(garment_id: 12,
@@ -1059,7 +1162,8 @@ def make_items
 				   thigh: 11.75,
 				   knee: 8.65,
 				   leg_opening: 8.6,
-				   inseam: 34)
+				   inseam: 34,
+				   approval: true)
 
 	#size 34
 		Item.create!(garment_id: 12,
@@ -1069,7 +1173,8 @@ def make_items
 				   thigh: 11.75,
 				   knee: 8.9,
 				   leg_opening: 8.8,
-				   inseam: 34)
+				   inseam: 34,
+				   approval: true)
 
 #13 Unbranded 121
 	#size 28
@@ -1080,7 +1185,8 @@ def make_items
 					thigh: 10,
 					knee: 7.3,
 					leg_opening: 6.65,
-					inseam: 36.5)
+					inseam: 36.5,
+					approval: true)
 
 	#size 29
 		Item.create!(garment_id: 13,
@@ -1090,7 +1196,8 @@ def make_items
 					thigh: 10.25,
 					knee: 7.7,
 					leg_opening: 6.75,
-					inseam: 36.5)
+					inseam: 36.5,
+					approval: true)
 
 	#size 30
 		Item.create!(garment_id: 13,
@@ -1100,7 +1207,8 @@ def make_items
 					thigh: 10.5,
 					knee: 7.85,
 					leg_opening: 7,
-					inseam: 36.5)
+					inseam: 36.5,
+					approval: true)
 
 	#size 31
 		Item.create!(garment_id: 13,
@@ -1110,7 +1218,8 @@ def make_items
 					thigh: 10.75,
 					knee: 8,
 					leg_opening: 7,
-					inseam: 36.5)
+					inseam: 36.5,
+					approval: true)
 
 	#size 32
 		Item.create!(garment_id: 13,
@@ -1120,7 +1229,8 @@ def make_items
 					thigh: 11,
 					knee: 8.25,
 					leg_opening: 7.25,
-					inseam: 36.5)
+					inseam: 36.5,
+					approval: true)
 
 	#size 33
 		Item.create!(garment_id: 13,
@@ -1130,7 +1240,8 @@ def make_items
 					thigh: 11.25,
 					knee: 8.45,
 					leg_opening: 7.35,
-					inseam: 36.5)
+					inseam: 36.5,
+					approval: true)
 
 	#size 34
 		Item.create!(garment_id: 13,
@@ -1140,7 +1251,8 @@ def make_items
 					thigh: 11.5,
 					knee: 8.6,
 					leg_opening: 7.5,
-					inseam: 36.5)
+					inseam: 36.5,
+					approval: true)
 
 	#size 36
 		Item.create!(garment_id: 13,
@@ -1150,7 +1262,8 @@ def make_items
 					thigh: 12,
 					knee: 9,
 					leg_opening: 7.75,
-					inseam: 36.5)
+					inseam: 36.5,
+					approval: true)
 
 	#size 38
 		Item.create!(garment_id: 13,
@@ -1160,7 +1273,8 @@ def make_items
 					thigh: 12.5,
 					knee: 9.25,
 					leg_opening: 8,
-					inseam: 36.5)
+					inseam: 36.5,
+					approval: true)
 
 #14 Unbranded 221
 	#size 28
@@ -1171,7 +1285,8 @@ def make_items
 					thigh: 10.75,
 					knee: 7.25,
 					leg_opening: 6.75,
-					inseam: 34)
+					inseam: 34,
+					approval: true)
 
 	#size 29
 		Item.create!(garment_id: 14,
@@ -1181,7 +1296,8 @@ def make_items
 					thigh: 10.75,
 					knee: 7.5,
 					leg_opening: 7,
-					inseam: 34)
+					inseam: 34,
+					approval: true)
 
 	#size 30
 		Item.create!(garment_id: 14,
@@ -1191,7 +1307,8 @@ def make_items
 					thigh: 11.25,
 					knee: 7.65,
 					leg_opening: 7.25,
-					inseam: 34)
+					inseam: 34,
+					approval: true)
 
 	#size 31
 		Item.create!(garment_id: 14,
@@ -1201,7 +1318,8 @@ def make_items
 					thigh: 11.5,
 					knee: 7.9,
 					leg_opening: 7.5,
-					inseam: 34)
+					inseam: 34,
+					approval: true)
 
 	#size 32
 		Item.create!(garment_id: 14,
@@ -1211,7 +1329,8 @@ def make_items
 					thigh: 11.65,
 					knee: 8.15,
 					leg_opening: 7.65,
-					inseam: 34)
+					inseam: 34,
+					approval: true)
 
 	#size 33
 		Item.create!(garment_id: 14,
@@ -1221,7 +1340,8 @@ def make_items
 					thigh: 12,
 					knee: 8.45,
 					leg_opening: 7.85,
-					inseam: 34)
+					inseam: 34,
+					approval: true)
 
 	#size 34
 		Item.create!(garment_id: 14,
@@ -1231,7 +1351,8 @@ def make_items
 					thigh: 12.25,
 					knee: 8.55,
 					leg_opening: 8,
-					inseam: 34)
+					inseam: 34,
+					approval: true)
 
 	#size 36
 		Item.create!(garment_id: 14,
@@ -1241,7 +1362,8 @@ def make_items
 					thigh: 12.75,
 					knee: 9,
 					leg_opening: 8.3,
-					inseam: 34.5)
+					inseam: 34.5,
+					approval: true)
 
 	#size 38
 		Item.create!(garment_id: 14,
@@ -1251,7 +1373,8 @@ def make_items
 					thigh: 13.25,
 					knee: 9.45,
 					leg_opening: 8.75,
-					inseam: 34.5)
+					inseam: 34.5,
+					approval: true)
 
 #15 Unbranded 321
 	#size 28
@@ -1262,7 +1385,8 @@ def make_items
 					thigh: 11,
 					knee: 8,
 					leg_opening: 8,
-					inseam: 34.5)
+					inseam: 34.5,
+					approval: true)
 
 	#size 29
 		Item.create!(garment_id: 15,
@@ -1272,7 +1396,8 @@ def make_items
 					thigh: 11,
 					knee: 8.2,
 					leg_opening: 8.2,
-					inseam: 34.5)
+					inseam: 34.5,
+					approval: true)
 
 	#size 30
 		Item.create!(garment_id: 15,
@@ -1282,7 +1407,8 @@ def make_items
 					thigh: 11.25,
 					knee: 8.4,
 					leg_opening: 8.4,
-					inseam: 34.5)
+					inseam: 34.5,
+					approval: true)
 
 	#size 31
 		Item.create!(garment_id: 15,
@@ -1292,7 +1418,8 @@ def make_items
 					thigh: 11.5,
 					knee: 8.5,
 					leg_opening: 8.5,
-					inseam: 34.5)
+					inseam: 34.5,
+					approval: true)
 
 	#size 32
 		Item.create!(garment_id: 15,
@@ -1302,7 +1429,8 @@ def make_items
 					thigh: 11.75,
 					knee: 8.6,
 					leg_opening: 8.6,
-					inseam: 34.5)
+					inseam: 34.5,
+					approval: true)
 
 	#size 33
 		Item.create!(garment_id: 15,
@@ -1312,7 +1440,8 @@ def make_items
 					thigh: 12,
 					knee: 8.8,
 					leg_opening: 8.8,
-					inseam: 34.5)
+					inseam: 34.5,
+					approval: true)
 
 	#size 34
 		Item.create!(garment_id: 15,
@@ -1322,7 +1451,8 @@ def make_items
 					thigh: 12.25,
 					knee: 9,
 					leg_opening: 9,
-					inseam: 34.5)
+					inseam: 34.5,
+					approval: true)
 
 	#size 36
 		Item.create!(garment_id: 15,
@@ -1332,7 +1462,8 @@ def make_items
 					thigh: 12.75,
 					knee: 9.5,
 					leg_opening: 9.5,
-					inseam: 34.5)
+					inseam: 34.5,
+					approval: true)
 
 	#size 38
 		Item.create!(garment_id: 15,
@@ -1342,7 +1473,8 @@ def make_items
 					thigh: 13.25,
 					knee: 9.75,
 					leg_opening: 9.75,
-					inseam: 34.5)
+					inseam: 34.5,
+					approval: true)
 
 #16 Baldwin Henley
 	#size 28
@@ -1353,7 +1485,8 @@ def make_items
 					thigh: 10.75,
 					knee: 7.4,
 					leg_opening: 6.8,
-					inseam: 35)
+					inseam: 35,
+					approval: true)
 
 	#size 29
 		Item.create!(garment_id: 16,
@@ -1363,7 +1496,8 @@ def make_items
 					thigh: 11,
 					knee: 7.6,
 					leg_opening: 7,
-					inseam: 35)
+					inseam: 35,
+					approval: true)
 
 	#size 30
 		Item.create!(garment_id: 16,
@@ -1373,7 +1507,8 @@ def make_items
 					thigh: 11.25,
 					knee: 7.8,
 					leg_opening: 7.2,
-					inseam: 36)
+					inseam: 36,
+					approval: true)
 
 	#size 31
 		Item.create!(garment_id: 16,
@@ -1383,7 +1518,8 @@ def make_items
 					thigh: 11.5,
 					knee: 7.9,
 					leg_opening: 7.4,
-					inseam: 36)
+					inseam: 36,
+					approval: true)
 
 	#size 32
 		Item.create!(garment_id: 16,
@@ -1393,7 +1529,8 @@ def make_items
 					thigh: 11.75,
 					knee: 8.1,
 					leg_opening: 7.6,
-					inseam: 36)
+					inseam: 36,
+					approval: true)
 
 	#size 33
 		Item.create!(garment_id: 16,
@@ -1403,7 +1540,8 @@ def make_items
 					thigh: 12.25,
 					knee: 8.3,
 					leg_opening: 7.8,
-					inseam: 36)
+					inseam: 36,
+					approval: true)
 
 	#size 34
 		Item.create!(garment_id: 16,
@@ -1413,7 +1551,8 @@ def make_items
 					thigh: 12.25,
 					knee: 8.5,
 					leg_opening: 8.1,
-					inseam: 36)
+					inseam: 36,
+					approval: true)
 
 	#size 36
 		Item.create!(garment_id: 16,
@@ -1423,7 +1562,8 @@ def make_items
 					thigh: 13,
 					knee: 8.8,
 					leg_opening: 8.35,
-					inseam: 36)
+					inseam: 36,
+					approval: true)
 
 #17 Baldwin Reed
 	#size 28
@@ -1434,7 +1574,8 @@ def make_items
 					thigh: 11,
 					knee: 7.65,
 					leg_opening: 7.1,
-					inseam: 36)
+					inseam: 36,
+					approval: true)
 
 	#size 29
 		Item.create!(garment_id: 17,
@@ -1444,7 +1585,8 @@ def make_items
 					thigh: 11.25,
 					knee: 7.9,
 					leg_opening: 7.4,
-					inseam: 36)
+					inseam: 36,
+					approval: true)
 
 	#size 30
 		Item.create!(garment_id: 17,
@@ -1454,7 +1596,8 @@ def make_items
 					thigh: 11.5,
 					knee: 8.25,
 					leg_opening: 7.7,
-					inseam: 36)
+					inseam: 36,
+					approval: true)
 
 	#size 31
 		Item.create!(garment_id: 17,
@@ -1464,7 +1607,8 @@ def make_items
 					thigh: 11.75,
 					knee: 8.5,
 					leg_opening: 8,
-					inseam: 36.5)
+					inseam: 36.5,
+					approval: true)
 
 	#size 32
 		Item.create!(garment_id: 17,
@@ -1474,7 +1618,8 @@ def make_items
 					thigh: 12,
 					knee: 8.9,
 					leg_opening: 8.35,
-					inseam: 36.5)
+					inseam: 36.5,
+					approval: true)
 
 	#size 33
 		Item.create!(garment_id: 17,
@@ -1484,7 +1629,8 @@ def make_items
 					thigh: 12.25,
 					knee: 9.15,
 					leg_opening: 9,
-					inseam: 36.5)
+					inseam: 36.5,
+					approval: true)
 
 	#size 34
 		Item.create!(garment_id: 17,
@@ -1494,7 +1640,8 @@ def make_items
 					thigh: 12.5,
 					knee: 9.4,
 					leg_opening: 9,
-					inseam: 36.5)
+					inseam: 36.5,
+					approval: true)
 
 	#size 36
 		Item.create!(garment_id: 17,
@@ -1504,7 +1651,8 @@ def make_items
 					thigh: 13,
 					knee: 9.7,
 					leg_opening: 9.3,
-					inseam: 36.5)
+					inseam: 36.5,
+					approval: true)
 
 #18 Baldwin Samuel
 	#size 28
@@ -1515,7 +1663,8 @@ def make_items
 					thigh: 10,
 					knee: 7.75,
 					leg_opening: 7.5,
-					inseam: 33)
+					inseam: 33,
+					approval: true)
 
 	#size 29
 		Item.create!(garment_id: 18,
@@ -1525,7 +1674,8 @@ def make_items
 					thigh: 10.5,
 					knee: 8,
 					leg_opening: 7.75,
-					inseam: 33)
+					inseam: 33,
+					approval: true)
 
 	#size 30
 		Item.create!(garment_id: 18,
@@ -1535,7 +1685,8 @@ def make_items
 					thigh: 10.75,
 					knee: 8.25,
 					leg_opening: 8,
-					inseam: 33.5)
+					inseam: 33.5,
+					approval: true)
 
 	#size 31
 		Item.create!(garment_id: 18,
@@ -1545,7 +1696,8 @@ def make_items
 					thigh: 11,
 					knee: 8.25,
 					leg_opening: 8,
-					inseam: 35.5)
+					inseam: 35.5,
+					approval: true)
 
 	#size 32
 		Item.create!(garment_id: 18,
@@ -1555,7 +1707,8 @@ def make_items
 					thigh: 11.4,
 					knee: 8.4,
 					leg_opening: 8,
-					inseam: 34)
+					inseam: 34,
+					approval: true)
 
 	#size 33
 		Item.create!(garment_id: 18,
@@ -1565,7 +1718,8 @@ def make_items
 					thigh: 11.75,
 					knee: 8.7,
 					leg_opening: 8.1,
-					inseam: 34)
+					inseam: 34,
+					approval: true)
 
 	#size 34
 		Item.create!(garment_id: 18,
@@ -1575,7 +1729,8 @@ def make_items
 					thigh: 12,
 					knee: 8.9,
 					leg_opening: 8.35,
-					inseam: 34)
+					inseam: 34,
+					approval: true)
 
 	#size 36
 		Item.create!(garment_id: 18,
@@ -1585,7 +1740,8 @@ def make_items
 					thigh: 12.5,
 					knee: 9.5,
 					leg_opening: 8.5,
-					inseam: 34)
+					inseam: 34,
+					approval: true)
 
 #19 N&F Super Skinny Okayama Spirit
 	#size 28
@@ -1596,7 +1752,8 @@ def make_items
 					thigh: 9.25,
 					knee: 7,
 					leg_opening: 6,
-					inseam: 33)
+					inseam: 33,
+					approval: true)
 
 	#size 29
 		Item.create!(garment_id: 19,
@@ -1606,7 +1763,8 @@ def make_items
 					thigh: 9.5,
 					knee: 7.25,
 					leg_opening: 6.25,
-					inseam: 33)
+					inseam: 33,
+					approval: true)
 
 	#size 30
 		Item.create!(garment_id: 19,
@@ -1616,7 +1774,8 @@ def make_items
 					thigh: 9.75,
 					knee: 7.5,
 					leg_opening: 6.4,
-					inseam: 33)
+					inseam: 33,
+					approval: true)
 
 	#size 31
 		Item.create!(garment_id: 19,
@@ -1626,7 +1785,8 @@ def make_items
 					thigh: 10,
 					knee: 7.65,
 					leg_opening: 6.5,
-					inseam: 33)
+					inseam: 33,
+					approval: true)
 
 	#size 32
 		Item.create!(garment_id: 19,
@@ -1636,7 +1796,8 @@ def make_items
 					thigh: 10.25,
 					knee: 7.75,
 					leg_opening: 6.75,
-					inseam: 33)
+					inseam: 33,
+					approval: true)
 
 	#size 33
 		Item.create!(garment_id: 19,
@@ -1646,7 +1807,8 @@ def make_items
 					thigh: 10.5,
 					knee: 8.1,
 					leg_opening: 6.85,
-					inseam: 33)
+					inseam: 33,
+					approval: true)
 
 	#size 34
 		Item.create!(garment_id: 19,
@@ -1656,7 +1818,8 @@ def make_items
 					thigh: 10.75,
 					knee: 8.2,
 					leg_opening: 7,
-					inseam: 33)
+					inseam: 33,
+					approval: true)
 
 #20 PBJ xx-014
 	#size 26
@@ -1667,7 +1830,8 @@ def make_items
 					thigh: 10.25,
 					knee: 6.5,
 					leg_opening: 6,
-					inseam: 37.5)
+					inseam: 37.5,
+					approval: true)
 
 	#size 27
 		Item.create!(garment_id: 20,
@@ -1677,7 +1841,8 @@ def make_items
 					thigh: 10.5,
 					knee: 6.75,
 					leg_opening: 6.25,
-					inseam: 37.5)
+					inseam: 37.5,
+					approval: true)
 
 	#size 28
 		Item.create!(garment_id: 20,
@@ -1687,7 +1852,8 @@ def make_items
 					thigh: 10.75,
 					knee: 7,
 					leg_opening: 6.5,
-					inseam: 37.5)
+					inseam: 37.5,
+					approval: true)
 
 	#size 29
 		Item.create!(garment_id: 20,
@@ -1697,7 +1863,8 @@ def make_items
 					thigh: 11,
 					knee: 7.25,
 					leg_opening: 6.75,
-					inseam: 37.5)
+					inseam: 37.5,
+					approval: true)
 
 	#size 30
 		Item.create!(garment_id: 20,
@@ -1707,7 +1874,8 @@ def make_items
 					thigh: 11.5,
 					knee: 7.5,
 					leg_opening: 7,
-					inseam: 37.5)
+					inseam: 37.5,
+					approval: true)
 
 	#size 31
 		Item.create!(garment_id: 20,
@@ -1717,7 +1885,8 @@ def make_items
 					thigh: 11.75,
 					knee: 7.75,
 					leg_opening: 7.5,
-					inseam: 37.5)
+					inseam: 37.5,
+					approval: true)
 
 	#size 32
 		Item.create!(garment_id: 20,
@@ -1727,7 +1896,8 @@ def make_items
 					thigh: 12,
 					knee: 8,
 					leg_opening: 7.5,
-					inseam: 37.5)
+					inseam: 37.5,
+					approval: true)
 
 	#size 33
 		Item.create!(garment_id: 20,
@@ -1737,7 +1907,8 @@ def make_items
 					thigh: 12.25,
 					knee: 8.25,
 					leg_opening: 7.75,
-					inseam: 37.5)
+					inseam: 37.5,
+					approval: true)
 
 	#size 34
 		Item.create!(garment_id: 20,
@@ -1747,7 +1918,8 @@ def make_items
 					thigh: 12.5,
 					knee: 8.25,
 					leg_opening: 8,
-					inseam: 37.5)
+					inseam: 37.5,
+					approval: true)
 
 	#size 36
 		Item.create!(garment_id: 20,
@@ -1757,7 +1929,8 @@ def make_items
 					thigh: 13.25,
 					knee: 8.75,
 					leg_opening: 8.5,
-					inseam: 37.5)
+					inseam: 37.5,
+					approval: true)
 
 	#size 38
 		Item.create!(garment_id: 20,
@@ -1767,7 +1940,8 @@ def make_items
 					thigh: 14,
 					knee: 9.5,
 					leg_opening: 9,
-					inseam: 37.5)
+					inseam: 37.5,
+					approval: true)
 
 end
 

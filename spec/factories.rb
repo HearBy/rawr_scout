@@ -37,9 +37,10 @@ FactoryGirl.define do
 		front_rise  10.8
 		thigh  		11.2
 		knee  		8.3
-		leg_opening  7.7
+		leg_opening 7.7
 		inseam  	37
 		tag_size 	30
+		approval	false
 		garment
 		admin_user
 	end

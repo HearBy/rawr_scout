@@ -1,10 +1,12 @@
 class Item < ActiveRecord::Base
-	attr_accessible :front_rise, :garment_id, :inseam, :knee, :leg_opening, :tag_size, :thigh, :waist
+	attr_accessible :front_rise, :garment_id, :inseam, :knee, :leg_opening, 
+					:tag_size, :thigh, :waist, :approval, :admin_user_id
 	
 	belongs_to :garment
 	belongs_to :admin_user
 
 	validates :garment_id, presence: true
+	validates :admin_user_id, presence: true
 
 	validates_numericality_of :waist, 		greater_than_or_equal_to: 26, less_than_or_equal_to: 42
 	validates_numericality_of :front_rise, 	greater_than_or_equal_to: 8, less_than_or_equal_to: 14
