@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140103213820) do
+ActiveRecord::Schema.define(:version => 20140103220210) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -74,9 +74,10 @@ ActiveRecord::Schema.define(:version => 20140103213820) do
     t.decimal  "leg_opening",   :precision => 5, :scale => 3
     t.decimal  "inseam",        :precision => 5, :scale => 1
     t.integer  "garment_id"
-    t.datetime "created_at",                                  :null => false
-    t.datetime "updated_at",                                  :null => false
+    t.datetime "created_at",                                                     :null => false
+    t.datetime "updated_at",                                                     :null => false
     t.integer  "admin_user_id"
+    t.boolean  "approval",                                    :default => false
   end
 
 end

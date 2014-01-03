@@ -17,6 +17,7 @@ describe Item do
 	it { should respond_to(:tag_size) }
 	it { should respond_to(:garment_id) }
 	it { should respond_to(:admin_user_id) }
+	it { should respond_to(:approval) }
 
 	it { should belong_to(:garment) }
 	it { should belong_to(:admin_user) }
