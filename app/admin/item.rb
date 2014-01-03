@@ -14,8 +14,24 @@ ActiveAdmin.register Item do
       f.input :leg_opening
       f.input :inseam
       f.input :admin_user_id, :as => :hidden, :value => current_active_admin_user.id
+
+      if current_active_admin_user.role == "admin"
+        f.input :approval, :as => :radio, collection: [true, false]
+      end
     end
     f.actions
+  end
+
+  batch_action :toggle_approve do |selection|
+    if current_active_admin_user.role == "admin"
+      Item.find(selection).each do |item|
+        item.toggle!(:approval)
+      end
+      redirect_to admin_items_path
+    end
+    if current_active_admin_user.role == "item_only"
+      redirect_to admin_items_path, :alert => "You are unauthorized for this method"
+    end
   end
 
   controller do
@@ -39,7 +55,12 @@ ActiveAdmin.register Item do
     column :tag_size do |item|
       link_to item.tag_size, [:admin, item]
     end
-    column "True Waist", :waist
+    column :waist
+    column :front_rise
+    column :thigh
+    column :knee
+    column :leg_opening
+    column :inseam
     column :approval
     column :admin_user
     default_actions
