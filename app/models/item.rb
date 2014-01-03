@@ -17,7 +17,7 @@ class Item < ActiveRecord::Base
 		if search && column && !(Garment.all.map{|i| i.send("#{column}").to_s}.uniq & search).empty?
 			joins(:garment).where("garments.#{column}" => search)
 		else
-			all
+			scoped
 		end
 	end
 
@@ -28,7 +28,7 @@ class Item < ActiveRecord::Base
 	    when "false"
 	      joins(:garment).where("#{column} = ?", false)
 	    else
-	      all
+	      scoped
 	    end
 	end
 
@@ -39,7 +39,7 @@ class Item < ActiveRecord::Base
 			where('waist <= ?', (waist_size.to_d + 0.5))
 			.where('waist >= ?', (waist_size.to_d - 0.5))
 		else
-			all
+			scoped
 		end
 	end
 
@@ -47,7 +47,7 @@ class Item < ActiveRecord::Base
 		if min && max 
 			joins(:garment).where('garments.price >= ?', min).where('garments.price <= ?', max)
 		else
-			all 
+			scoped 
 		end
 	end
 
@@ -55,7 +55,7 @@ class Item < ActiveRecord::Base
 		if min && max 
 			joins(:garment).where('garments.denim_weight >= ?', min).where('garments.denim_weight <= ?', max)
 		else
-			all 
+			scoped 
 		end
 	end
 
@@ -64,7 +64,7 @@ class Item < ActiveRecord::Base
 			where('front_rise <= ?', (front_rise_size.to_d + 0.25))
 			.where('front_rise >= ?', (front_rise_size.to_d - 0.25))
 		else
-			all
+			scoped
 		end
 	end
 
@@ -73,7 +73,7 @@ class Item < ActiveRecord::Base
 			where('thigh <= ?', (thigh_size.to_d + 0.25))
 			.where('thigh >= ?', (thigh_size.to_d - 0.25))
 		else
-			all
+			scoped
 		end
 	end
 
@@ -82,7 +82,7 @@ class Item < ActiveRecord::Base
 			where('knee <= ?', (knee_size.to_d + 0.25))
 			.where('knee >= ?', (knee_size.to_d - 0.25))
 		else
-			all
+			scoped
 		end
 	end
 
@@ -91,7 +91,7 @@ class Item < ActiveRecord::Base
 			where('leg_opening <= ?', (leg_opening_size.to_d + 0.25))
 			.where('leg_opening >= ?', (leg_opening_size.to_d - 0.25))
 		else
-			all
+			scoped
 		end
 	end
 end
