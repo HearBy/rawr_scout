@@ -1,7 +1,23 @@
+<% provide(:title, "Rawr Denim Scout") %>
+
+<%= render 'sizer_scripts' %>
+
 <div class="row">
-	<div class="large-12 columns">
-		<% @jeans.each do |jean| %>
-			<%= jean.garment.name %>
+	<div class="large-3 columns">
+		<ul class="side-nav">
+			<%= render 'simple_form' %>
+		</ul>
+	</div>
+	<div class="large-9 columns">
+		<% @jeans.each_slice(3) do |three_jeans| %>
+			<div class="row">
+				<% three_jeans.each do |jean| %>
+					<div class="large-4 columns left jean-container">
+						<%= render "jean", jean: jean %>
+						<hr align="right" class="bottom-border">
+					</div>
+				<% end %>
+			</div>
 		<% end %>
-	</div>	
+	</div>
 </div>

@@ -1,0 +1,73 @@
+<%= render "simple_search", column: "made_in", jeans: jeans %>
+
+<br>
+
+<%= render "simple_search", column: "fabric_origin", jeans: jeans %>
+
+<br>
+
+<%= render "simple_search", column: "color", jeans: jeans %>
+
+<br>
+
+<%= render "simple_search", column: "brand", jeans: jeans %>
+
+<br>
+
+<div class="row">
+	<div class="large-12 columns">
+		<h6>Sanforized:</h6>
+		<label for="sanforized_true">
+        	<%= radio_button_tag :sanforized, true, 
+                    (params[:sanforized] == "true" ? true : false) %>
+            Yes
+        </label>
+		<label for="sanforized_false">
+        	<%= radio_button_tag :sanforized, false, 
+                    (params[:sanforized] == "false" ? true : false) %>
+        	No
+        </label>
+		<label for="sanforized_none">
+            <%= radio_button_tag :sanforized, "none", 
+                        (params[:sanforized] == nil || 
+                         params[:sanforized] == "none" ? true : false) %>
+			No Preference
+		</label>
+	</div>
+</div>
+
+<br>
+
+<div class="row">
+	<div class="large-12 columns">
+		<h6>Selvedge:</h6>
+		<label for="selvedge_true">
+        	<%= radio_button_tag :selvedge, true, 
+                    (params[:selvedge] == "true" ? true : false) %>
+            Yes
+        </label>
+		<label for="selvedge_false">
+        	<%= radio_button_tag :selvedge, false, 
+                    (params[:selvedge] == "false" ? true : false) %>
+        	No
+        </label>
+		<label for="selvedge_none">
+            <%= radio_button_tag :selvedge, "none", 
+                        (params[:selvedge] == nil || 
+                         params[:selvedge] == "none" ? true : false) %>
+			No Preference
+		</label>
+	</div>
+</div>
+
+<br>
+
+<div class="row">
+	<div class="large-12 columns">
+		<h6>Denim Weight:</h6>
+		<input type="text" id="amount-weight" style="border: 0; color: #f6931f; font-weight: bold;" />
+        <div id="slider-weight" style="width:90%;"></div>
+        <%= hidden_field_tag :min_denim_weight, params[:min_denim_weight], value: params[:min_denim_weight] || 5 %>
+        <%= hidden_field_tag :max_denim_weight, params[:max_denim_weight], value: params[:max_denim_weight] || 32 %>	
+	</div>
+</div>

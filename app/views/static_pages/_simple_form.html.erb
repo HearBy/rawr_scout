@@ -1,0 +1,61 @@
+<%= form_tag root_path, :method => 'get', :id => "test", class: "sizer-form" do %>
+    <div class="row">
+        <div class="large-12 columns">
+            <h6>Price Range:</h6>
+            <input type="text" id="amount-price" style="border: 0; color: #f6931f; font-weight: bold;" />
+            <div id="slider-price" style="width:90%;"></div>
+            <%= hidden_field_tag :min_price, params[:min_price], value: params[:min_price] || 0 %>
+            <%= hidden_field_tag :max_price, params[:max_price], value: params[:max_price] || 500 %>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="large-12 columns">
+            <h6>Fit:</h6>
+
+            <%= link_to "Clear Fit", '#', 
+                    class: "clear_fit clear-link",
+                    style: !params[:fit].blank? ? "" : "display:none;" %>
+
+            <% for i in @jeans.map{|i| i.garment.fit}.uniq.sort_by{|e| e} %>
+                <label for="checkbox_<%= i.gsub(' ', '_') %>">
+                    <%= check_box_tag 'fit[]', i, 
+                            params[:fit] ? params[:fit].include?(i) : false, 
+                            id: "checkbox_#{i.gsub(' ', '_')}",
+                            class: "checkboxes checkboxes_fit" %>
+                    <%= i.capitalize %>
+                </label>
+            <% end %>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="large-12 columns">
+            <h6>Waist Size:</h6>
+            <input type="text" id="amount-waist" style="border: 0; color: #f6931f; font-weight: bold;" />
+            <div class="slider-single">
+                <div id="slider-waist"></div>
+            </div><br>
+            <%= hidden_field_tag :waist, params[:waist], value: params[:waist] || 32 %> 
+        </div>
+    </div>
+
+    <br>
+
+    <% if params[:min_denim_weight] %>
+        <%= render partial: "simple_filters", locals: {jeans: @jeans} %>
+    <% else %>
+        <%= link_to "More Filters", root_path, 
+                class: "simple_filters_link button small radius secondary", 
+                remote: true %>
+
+        <span class="simple_filters_container"></span>
+    <% end %>
+
+    <br>
+    <%= submit_tag "Search", :name => nil, class: "button small radius sizer-button" %>
+<% end %>

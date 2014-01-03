@@ -1,0 +1,42 @@
+<div id="my_<%= jean.id %>" class="reveal-modal">
+	<%= render "jean_modal", jean: jean %>
+	<a class="close-reveal-modal">&#215;</a>
+</div>
+
+<div class="row">
+	<div class="large-12 columns">
+		<%= link_to image_tag(jean.garment.photo_url), '#', "data-reveal-id" => "my_#{jean.id}"  %>
+	</div>
+</div>
+
+<div class="row">
+	<div class="large-12 columns">
+		<div class="jean-brand">
+			<%= link_to jean.garment.brand, '#', "data-reveal-id" => "my_#{jean.id}"  %>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="large-12 columns">
+		<div class="jean-model">
+			<%= jean.garment.name %> (Size <%= jean.tag_size %>)
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="large-12 columns">
+		<div class="jean-fit">
+			<%= jean.garment.fit.capitalize %>	
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="large-12 columns">
+		<div class="jean-price">
+			$<%= number_with_precision(jean.garment.price, :precision => 2) %>
+		</div>
+	</div>
+</div>

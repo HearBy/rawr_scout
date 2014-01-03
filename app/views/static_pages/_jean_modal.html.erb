@@ -1,0 +1,102 @@
+<div class="row">
+	<div class="large-4 columns">
+		<%= image_tag(jean.garment.photo_url, class: "modal-image") %>
+	</div>
+	<div class="large-8 columns">
+		<div class="row">
+			<div class="large-12 columns">
+				<span class="modal-brand">
+					<%= jean.garment.brand %>
+				</span>
+				<span class="modal-model">
+					<%= jean.garment.name %>
+				</span>
+			</div>
+		</div>		
+
+		<div class="row">
+			<div class="large-9 large-offset-3 columns">
+				<span class="modal-fit">
+					<%= jean.garment.fit %>
+				</span>	
+				<span class="modal-model">
+					- Size <%= jean.tag_size %>
+				</span>
+			</div>
+		</div>
+
+		<br>
+
+		<div class="row">
+			<div class="large-12 columns">
+				<table class="table table-striped" width="100%">
+					<tbody>
+						<tr>
+							<td>
+								<b>True Waist</b> <%= jean.waist %>"
+							</td>
+							<td>
+								<b>Sanforized</b> <%= jean.garment.sanforized %>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Front Rise</b> <%= number_with_precision(jean.front_rise, :precision => 2) %>"
+							</td>
+							<td>
+								<b>Weight</b> <%= jean.garment.denim_weight %> oz
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Thigh</b> <%= number_with_precision(jean.thigh, :precision => 2) %>"
+							</td>
+							<td>
+								<b>Made In</b> <%= jean.garment.made_in %>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Knee</b> <%= number_with_precision(jean.knee, :precision => 2) %>"
+							</td>
+							<td>
+								<b>Fabric</b> <%= jean.garment.fabric_origin %>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<b>Leg</b> <%= number_with_precision(jean.leg_opening, :precision => 2) %>"
+							</td>
+							<td>
+								<b>Color</b> <%= jean.garment.color %>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-6 columns">
+				<span class="modal-price">
+					$<%= number_with_precision(jean.garment.price, :precision => 2) %>
+				</span>
+			</div>
+
+			<div class="large-6 columns">
+				<%= link_to "SHOP at: #{jean.garment.brand}", jean.garment.url, class: "button small", :target => "_blank" %>
+			</div>
+		</div>
+
+		<br>
+
+		<div class="row">
+			<div class="large-12 columns">
+				<span class="modal-disclaimer">
+					By purchasing the <%= jean.garment.brand %> <%= jean.garment.name %> through the button above, you are supporting RawrDenim.com Thank you!
+				</span>
+			</div>
+		</div>
+
+	</div>
+</div>
