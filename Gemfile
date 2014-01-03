@@ -6,6 +6,7 @@ gem 'jquery-ui-rails'
 
 gem 'activeadmin'
 gem "meta_search",    '>= 1.1.0.pre'
+gem 'jquery-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -22,9 +23,9 @@ group :assets do
   gem 'sass-rails',   '3.2.5'
   gem 'coffee-rails', '3.2.2'
   gem 'uglifier', '1.2.3'
+  gem 'compass-rails'
+  gem 'zurb-foundation'
 end
-
-gem 'jquery-rails'
 
 group :test do
   gem 'capybara', '1.1.2'
