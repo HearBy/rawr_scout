@@ -22,6 +22,8 @@ describe Garment do
 	it { should respond_to(:url) }
 	it { should respond_to(:photo_url) }
 
+	it { should have_many(:items) }
+
 	it { should validate_presence_of(:name) }
 	it { should validate_presence_of(:brand) }
 	it { should validate_presence_of(:fabric_origin) }

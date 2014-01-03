@@ -7,5 +7,7 @@ class AdminUser < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :role
 
+  has_many :items
+
   validates :role, presence: true, :inclusion => { :in => ["admin", "item_only"] }
 end

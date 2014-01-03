@@ -1,6 +1,6 @@
 FactoryGirl.define do 
 	factory :admin_user do
-		email 	  			  'test@example.com'
+		sequence(:email) { |n| "person_#{n}@example.com" }
 		password 			  'rawrscout'
 		password_confirmation 'rawrscout'
 		role 				  'admin' 
@@ -41,5 +41,6 @@ FactoryGirl.define do
 		inseam  	37
 		tag_size 	30
 		garment
+		admin_user
 	end
 end

@@ -16,6 +16,10 @@ describe Item do
 	it { should respond_to(:inseam) }
 	it { should respond_to(:tag_size) }
 	it { should respond_to(:garment_id) }
+	it { should respond_to(:admin_user_id) }
+
+	it { should belong_to(:garment) }
+	it { should belong_to(:admin_user) }
 
 	it { should validate_numericality_of(:waist).is_greater_than_or_equal_to(26).is_less_than_or_equal_to(42) }
 	it { should validate_numericality_of(:front_rise).is_greater_than_or_equal_to(8).is_less_than_or_equal_to(14) }
