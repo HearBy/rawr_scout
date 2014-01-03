@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.16'
 
+gem 'jquery-ui-rails'
 
 gem 'activeadmin'
 gem "meta_search",    '>= 1.1.0.pre'
