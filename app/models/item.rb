@@ -21,7 +21,6 @@ class Item < ActiveRecord::Base
 		end
 	end
 
-
 	def self.boolean_search(column, search)
 		case search
 	    when "true"

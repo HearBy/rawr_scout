@@ -1,8 +1,7 @@
 <div class="row">
-	<div class="large-6 columns">
-		THIS IS A SUPER TEST
+	<div class="large-12 columns">
+		<% @jeans.each do |jean| %>
+			<%= jean.garment.name %>
+		<% end %>
 	</div>	
-	<div class="large-6 columns">
-		THIS IS A SUPER TEST
-	</div>
 </div>

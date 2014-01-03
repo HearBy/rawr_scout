@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.16'
 
 gem 'jquery-ui-rails'
+gem 'pg'
 
 gem 'activeadmin'
 gem "meta_search",    '>= 1.1.0.pre'
@@ -13,7 +14,6 @@ gem 'jquery-rails'
 
 
 group :development, :test do
-  gem 'sqlite3'
   gem 'rspec-rails'
 end
 
@@ -34,7 +34,6 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '0.12.2'
   gem 'rails_12factor'
 end
 
