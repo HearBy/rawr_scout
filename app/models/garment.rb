@@ -3,6 +3,11 @@ class Garment < ActiveRecord::Base
 
 	has_many :items, dependent: :destroy
 
+	scope :items_not_exist_eq, Garment.includes(:items).where(:items => {:garment_id=>nil})
+	scope :items_exist_eq, Garment.includes(:items).where('items.garment_id IS NOT NULL')
+	search_method :items_exist_eq
+	search_method :items_not_exist_eq
+
 	validates :name, presence: true
 	validates :brand, presence: true
 	validates :fabric_origin, presence: true
