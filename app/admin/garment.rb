@@ -12,9 +12,16 @@ ActiveAdmin.register Garment do
   index do
     selectable_column
     column :name, :sortable => :name do |garment|
-      link_to garment.name, garment.url, :target => "_blank"
+      link_to garment.name, [:admin, garment]
     end
     column :brand
+    column "Tag Sizes" do |garment|
+      if garment.items != []
+        raw(garment.items.map {|i| link_to(i.tag_size, [:admin, i])}.join(', '))
+      else
+        h4("NONE", :class => "no_items")
+      end
+    end
     column :fabric_origin
     column :made_in
     column :price, :sortable => :price do |garment|
@@ -22,9 +29,29 @@ ActiveAdmin.register Garment do
         number_to_currency garment.price
       end
     end
-    column :denim_weight
-    column :color
+    column "Weight", :denim_weight
     column :fit
+    column "link" do |garment|
+      link_to truncate(garment.url[7..(garment.url.length)], length:20), garment.url, :target => "_blank"
+    end
     default_actions
+  end
+
+  show do
+    render "admin_garment", garment: garment
+
+    attributes_table do
+      row :fabric_origin
+      row :made_in
+      row :denim_weight
+      row :color
+      row :sanforized
+      row :stretch
+      row :selvedge
+      row :id
+      row :created_at
+      row :updated_at
+    end
+    active_admin_comments
   end
 end

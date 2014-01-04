@@ -1,0 +1,19 @@
+<div class="admin_garment_text">
+	<div class="admin_bold_text">
+		<%= item.garment.brand %>
+	</div>
+	<div class="admin_bold_text">
+		<%= link_to item.garment.name, [:admin, item.garment] %>
+	</div>
+	<div class="admin_other_text">
+		<%= number_to_currency item.garment.price %>
+	</div>
+	<div class="admin_other_text">
+		<%= item.garment.fit %>
+	</div>
+	<div class="admin_other_text">
+		Size <%= item.tag_size %>
+	</div>
+</div>
+
+<%= image_tag(item.garment.photo_url, class: "admin_garment_photo") %>

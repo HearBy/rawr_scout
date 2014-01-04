@@ -27,3 +27,41 @@
 // .active_admin       applies to any Active Admin namespace
 // .admin_namespace    applies to the admin namespace (eg: /admin)
 // .other_namespace    applies to a custom namespace named other (eg: /other)
+
+.active_admin {
+	.admin_garment_photo {
+		width:300px;
+	}
+
+	.admin_garment_text {
+		position:relative;
+		display:inline-block;
+		width:50%;
+		div {
+			display:inline-block;
+			width:100%;
+			margin-bottom:15px;
+		}
+	}
+
+	.admin_bold_text {
+		font-size:3em;
+		font-weight:bold;
+		line-height:0.9em;
+	}
+
+	.admin_other_text {
+		font-size:2.7em;
+		line-height:0.9em;
+	}
+
+	.admin_link_text {
+		font-size:1.9em;
+		line-height:0.9em;
+	}
+
+	.no_items {
+		font-weight:bold;
+		color:black;
+	}
+}

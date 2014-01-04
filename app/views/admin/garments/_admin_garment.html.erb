@@ -1,0 +1,23 @@
+<div class="admin_garment_text">
+	<div class="admin_bold_text">
+		<%= garment.brand %>
+	</div>
+	<div class="admin_bold_text">
+		<%= garment.name %>
+	</div>
+	<div class="admin_other_text">
+		<%= number_to_currency garment.price %>
+	</div>
+	<div class="admin_other_text">
+		<%= garment.fit %>
+	</div>
+	<div class="admin_other_text">
+		<%= raw(garment.items.map {|i| link_to(i.tag_size, [:admin, i])}.join(', ')) %>
+	</div>
+	<div class="admin_link_text">
+		<%= link_to truncate(garment.url[7..(garment.url.length)], length:50), garment.url, :target => "_blank" %>
+	</div>
+</div>
+
+<%= image_tag(garment.photo_url, class: "admin_garment_photo") %>
+

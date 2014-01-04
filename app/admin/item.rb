@@ -66,15 +66,10 @@ ActiveAdmin.register Item do
     default_actions
   end
 
-  show do |item|
+  show do
+    render "admin_item", item: item
+
     attributes_table do
-      row :id
-      row "Brand" do |item|
-        item.garment.brand
-      end
-      row "Model" do |item|
-        item.garment.name
-      end
       row :tag_size
       row :waist
       row :front_rise
@@ -82,6 +77,9 @@ ActiveAdmin.register Item do
       row :knee
       row :leg_opening
       row :inseam
+      row :admin_user
+      row :approval
+      row :id
       row :created_at
       row :updated_at
     end
