@@ -3,10 +3,7 @@ class Garment < ActiveRecord::Base
 
 	has_many :items, dependent: :destroy
 
-	scope :items_not_exist_eq, Garment.includes(:items).where(:items => {:garment_id=>nil})
-	scope :items_exist_eq, Garment.includes(:items).where('items.garment_id IS NOT NULL')
 	search_method :items_exist_eq
-	search_method :items_not_exist_eq
 
 	validates :name, presence: true
 	validates :brand, presence: true
@@ -21,4 +18,16 @@ class Garment < ActiveRecord::Base
 
 	validates_numericality_of :price, greater_than_or_equal_to: 20, less_than_or_equal_to: 1000
 	validates_numericality_of :denim_weight, greater_than_or_equal_to: 4, less_than_or_equal_to: 32
+
+	private
+
+	def self.items_exist_eq(query)
+		if query == "yes"
+			includes(:items).where('items.garment_id IS NOT NULL')
+		elsif query == "no"
+			includes(:items).where(:items => {:garment_id=>nil})
+		else
+			scoped
+		end
+	end
 end

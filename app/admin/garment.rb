@@ -1,8 +1,7 @@
 ActiveAdmin.register Garment do
   menu priority: 1
 
-  filter :items_not_exist, :as => :select, collection: [['NONE', 'yes']]
-  filter :items_exist, :as => :select, collection: [['Yes', 'yes']]
+  filter :items_exist, :as => :select, collection: [['Yes', 'yes'], ['No', 'no']]
   filter :brand, :as => :select
   filter :name, :as => :select
   filter :fabric_origin, :as => :select
