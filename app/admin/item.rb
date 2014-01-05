@@ -3,7 +3,7 @@ ActiveAdmin.register Item do
   
   form do |f|
     f.inputs 'Garment' do
-      f.input :garment
+      f.input :garment_id, :as => :select, collection: Garment.all.map{ |i| [i.name, i.id] }.sort_by{|e| e}
     end
     f.inputs 'Size Information' do
       f.input :tag_size
