@@ -20,8 +20,8 @@ ActiveAdmin.register Item do
   controller do
     def create
       if Garment.find(params[:item][:garment_id]).tag_size_empty
-        empty_sizes = Garment.find(params[:item][:garment_id]).tag_size_empty.split(', ')
-        new_size = params[:item][:tag_size].split(', ')
+        empty_sizes = Garment.find(params[:item][:garment_id]).tag_size_empty.gsub(' ', '').split(',')
+        new_size = params[:item][:tag_size].gsub(' ', '').split(',')
         new_empty_sizes = (empty_sizes - new_size).join(', ')
 
         Garment.find(params[:item][:garment_id]).update_attributes(tag_size_empty: new_empty_sizes)
@@ -29,6 +29,12 @@ ActiveAdmin.register Item do
 
       create! do |format|
         format.html { redirect_to admin_garments_path }
+      end
+    end
+
+    def update
+      update! do |format|
+        format.html { redirect_to admin_items_path }
       end
     end
 

@@ -36,6 +36,17 @@ describe "Authentication" do
 			it { should have_link("30", :href => "/admin/items/new?populate_garment_id=#{@garment.id}&tag_size=30") }
 			it { should have_link("32", :href => "/admin/items/new?populate_garment_id=#{@garment.id}&tag_size=32") }
 		
+			describe "with no spaces should work" do
+				before do
+					@no_space_garment = create(:garment, tag_size_empty: "30,32,34", measurements_url: "http://measurements.com")
+					visit admin_garments_path
+				end
+
+				it { should have_link("30", :href => "/admin/items/new?populate_garment_id=#{@no_space_garment.id}&tag_size=30") }
+				it { should have_link("32", :href => "/admin/items/new?populate_garment_id=#{@no_space_garment.id}&tag_size=32") }
+				it { should have_link("34", :href => "/admin/items/new?populate_garment_id=#{@no_space_garment.id}&tag_size=34") }
+			end
+
 			describe "autopopulate item form with tag size and garment info" do
 				before do
 					click_link "32"

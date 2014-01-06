@@ -39,7 +39,7 @@ ActiveAdmin.register Garment do
     end
     column "Tag Size Empty" do |garment|
       if garment.tag_size_empty
-        raw(garment.tag_size_empty.split(', ').map {|size| link_to size, new_admin_item_path(:populate_garment_id => garment.id, :tag_size => size)}.join(', '))
+        raw(garment.tag_size_empty.gsub(' ', '').split(',').map {|size| link_to size, new_admin_item_path(:populate_garment_id => garment.id, :tag_size => size)}.join(', '))
       else
         "Populated"
       end
