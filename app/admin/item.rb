@@ -24,7 +24,9 @@ ActiveAdmin.register Item do
     end
 
     def create
-      if Garment.find(params[:item][:garment_id]).tag_size_empty
+      # raise params[:item][:garment_id]
+
+      if Garment.find(params[:item][:garment_id]).tag_size_empty.present?
         empty_sizes = Garment.find(params[:item][:garment_id]).tag_size_empty.gsub(' ', '').split(',')
         new_size = params[:item][:tag_size].gsub(' ', '').split(',')
         new_empty_sizes = (empty_sizes - new_size).join(', ')
