@@ -6,7 +6,7 @@ class Ability
 
     if user.role == "item_only"
         can :read, ActiveAdmin::Page, :name => "Dashboard"
-        can [:read], Item
+        can [:read], Garment
         can [:create, :read], Item
     end
     

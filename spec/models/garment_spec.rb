@@ -21,6 +21,8 @@ describe Garment do
 	it { should respond_to(:selvedge) }
 	it { should respond_to(:url) }
 	it { should respond_to(:photo_url) }
+	it { should respond_to(:tag_size_empty) }
+	it { should respond_to(:measurements_url) }
 
 	it { should have_many(:items) }
 

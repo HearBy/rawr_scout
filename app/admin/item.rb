@@ -18,6 +18,12 @@ ActiveAdmin.register Item do
   end
 
   controller do
+    def create
+      create! do |format|
+        format.html { redirect_to admin_items_path }
+      end
+    end
+
     def scoped_collection
       resource_class.includes(:garment) # prevents N+1 queries to your database
     end

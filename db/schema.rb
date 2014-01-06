@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140103220210) do
+ActiveRecord::Schema.define(:version => 20140106021253) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(:version => 20140103220210) do
     t.string   "fabric_origin"
     t.string   "made_in"
     t.decimal  "price"
-    t.decimal  "denim_weight",  :precision => 5, :scale => 2
+    t.decimal  "denim_weight",     :precision => 5, :scale => 2
     t.string   "color"
     t.string   "fit"
     t.boolean  "sanforized"
@@ -61,8 +61,10 @@ ActiveRecord::Schema.define(:version => 20140103220210) do
     t.boolean  "selvedge"
     t.string   "url"
     t.text     "photo_url"
-    t.datetime "created_at",                                  :null => false
-    t.datetime "updated_at",                                  :null => false
+    t.datetime "created_at",                                     :null => false
+    t.datetime "updated_at",                                     :null => false
+    t.string   "tag_size_empty"
+    t.text     "measurements_url"
   end
 
   create_table "items", :force => true do |t|

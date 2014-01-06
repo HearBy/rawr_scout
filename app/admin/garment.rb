@@ -9,7 +9,21 @@ ActiveAdmin.register Garment do
   filter :denim_weight, :as => :numeric
   filter :color, :as => :check_boxes, collection: Garment.all.map(&:color).uniq
   filter :fit, :as => :check_boxes, collection: Garment.all.map(&:fit).uniq
-  
+
+  controller do
+    def create
+      create! do |format|
+        format.html { redirect_to admin_garments_path }
+      end
+    end
+
+    def update
+      update! do |format|
+        format.html { redirect_to admin_garments_path }
+      end
+    end
+  end
+
   index do
     selectable_column
     column :name, :sortable => :name do |garment|
@@ -24,12 +38,11 @@ ActiveAdmin.register Garment do
       end
     end
     column "Tag Size Empty" do |garment|
-      # if garment.items != []
-      #   raw(garment.items.map {|i| link_to(i.tag_size, [:admin, i])}.join(', '))
-      # else
-      #   h4("NONE", :class => "no_items")
-      # end
-      link_to "28", new_admin_item_path(:id => garment.id, :tag_size => 30)
+      if garment.tag_size_empty
+        raw(garment.tag_size_empty.split(', ').map {|size| link_to size, new_admin_item_path(:populate_garment_id => garment.id, :tag_size => size)}.join(', '))
+      else
+        "Populated"
+      end
     end
     column :fabric_origin
     column :made_in
