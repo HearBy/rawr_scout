@@ -20,7 +20,7 @@ ActiveAdmin.register Item do
   controller do
     def create
       create! do |format|
-        format.html { redirect_to admin_items_path }
+        format.html { redirect_to admin_garments_path }
       end
     end
 
