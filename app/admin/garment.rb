@@ -17,9 +17,14 @@ ActiveAdmin.register Garment do
       end
     end
 
+    def edit
+      session[:return_to] ||= request.referer
+      edit!
+    end
+
     def update
       update! do |format|
-        format.html { redirect_to admin_garments_path }
+        format.html { redirect_to session.delete(:return_to) }
       end
     end
   end

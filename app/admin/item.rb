@@ -18,6 +18,11 @@ ActiveAdmin.register Item do
   end
 
   controller do
+    def new
+      session[:return_to] ||= request.referer
+      new!
+    end
+
     def create
       if Garment.find(params[:item][:garment_id]).tag_size_empty
         empty_sizes = Garment.find(params[:item][:garment_id]).tag_size_empty.gsub(' ', '').split(',')
@@ -28,13 +33,18 @@ ActiveAdmin.register Item do
       end
 
       create! do |format|
-        format.html { redirect_to admin_garments_path }
+        format.html { redirect_to session.delete(:return_to) }
       end
+    end
+
+    def edit
+      session[:return_to] ||= request.referer
+      edit!
     end
 
     def update
       update! do |format|
-        format.html { redirect_to admin_items_path }
+        format.html { redirect_to session.delete(:return_to) }
       end
     end
 

@@ -160,5 +160,35 @@ describe "Authentication" do
 		it { should have_selector('.item_form_info', text: "BRAND: #{@garment.brand}") }
 		it { should have_selector('.item_form_info', text: "MODEL: #{@garment.name}") }
 		it { should have_selector('.item_form_info', text: "FABRIC ORIGIN: #{@garment.fabric_origin}") }
+
+		# describe "redirect with pagination" do
+		# 	before do
+		# 		@garment2 = create(:garment, name: "page_2_item")
+		# 		@item2 = create(:item, garment: @garment2)
+		# 		create_list(:item, 30)
+		# 		visit '/admin/items?order=id_desc&page=2'
+		# 		click_link "Edit"
+		# 	end
+
+		# 	it { should have_link("page_2_item") }
+
+		# 	it "should be page 2 of items index" do
+		# 		uri = URI.parse(current_url)
+		# 		"#{uri.path}?#{uri.query}".should == '/admin/items?order=id_desc&page=2'
+		# 	end
+
+		# 	describe "leads you back to page 2" do
+		# 		before do
+		# 			click_button "Update Item"
+		# 		end
+
+		# 		it { should have_content("Item was successfully updated") }
+
+		# 		it "should be page 2 of items index" do
+		# 			uri = URI.parse(current_url)
+		# 			"#{uri.path}?#{uri.query}".should == '/admin/items?order=id_desc&page=2'
+		# 		end
+		# 	end
+		# end
 	end
 end
