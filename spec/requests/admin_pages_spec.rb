@@ -69,7 +69,7 @@ describe "Authentication" do
 
 				it { should have_selector(".current", text: "Garments") }
 				it { should have_link("30", :href => "/admin/items/new?populate_garment_id=#{@garment.id}&tag_size=30") }
-				# it { should_not have_link("32", :href => "/admin/items/new?populate_garment_id=#{@garment.id}&tag_size=32") }
+				it { should_not have_link("32", :href => "/admin/items/new?populate_garment_id=#{@garment.id}&tag_size=32") }
 			end
 		end
 	end
