@@ -23,6 +23,14 @@ ActiveAdmin.register Garment do
         h4("NONE", :class => "no_items")
       end
     end
+    column "Tag Size Empty" do |garment|
+      # if garment.items != []
+      #   raw(garment.items.map {|i| link_to(i.tag_size, [:admin, i])}.join(', '))
+      # else
+      #   h4("NONE", :class => "no_items")
+      # end
+      link_to "28", new_admin_item_path(:id => garment.id, :tag_size => 30)
+    end
     column :fabric_origin
     column :made_in
     column :price, :sortable => :price do |garment|

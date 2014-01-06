@@ -2,24 +2,7 @@ ActiveAdmin.register Item do
   menu priority: 2
   
   form do |f|
-    f.inputs 'Garment' do
-      f.input :garment_id, :as => :select, collection: Garment.all.map{ |i| [i.name, i.id] }.sort_by{|e| e}
-    end
-    f.inputs 'Size Information' do
-      f.input :tag_size
-      f.input :waist
-      f.input :front_rise
-      f.input :thigh
-      f.input :knee
-      f.input :leg_opening
-      f.input :inseam
-      f.input :admin_user_id, :as => :hidden, :value => current_active_admin_user.id
-
-      if current_active_admin_user.role == "admin"
-        f.input :approval, :as => :radio, collection: [true, false]
-      end
-    end
-    f.actions
+    render :partial => "admin_item_form"
   end
 
   batch_action :toggle_approve do |selection|
