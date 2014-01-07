@@ -1,33 +1,23 @@
+<% if params[:populate_garment_id] || params[:id] %>
+	<% garment_id = (params[:populate_garment_id] || Item.find(params[:id]).garment.id) %>
+<% end %>
+
 <%= semantic_form_for [:admin, @item] do |f| %>
 	<%= f.inputs 'Garment' do %>
-		<% if params[:populate_garment_id] %>
+		<% if garment_id.present? %>
 			<div class="item_form_info">
-				<b>BRAND:</b> <%= Garment.find(params[:populate_garment_id]).brand %>
+				<b>BRAND:</b> <%= Garment.find(garment_id).brand %>
 			</div>
 			<div class="item_form_info">
-				<b>MODEL:</b> <%= Garment.find(params[:populate_garment_id]).name %>
+				<b>MODEL:</b> <%= Garment.find(garment_id).name %>
 			</div>
 			<div class="item_form_info">
-				<b>FABRIC ORIGIN:</b> <%= Garment.find(params[:populate_garment_id]).fabric_origin %>
-			</div>
-
-			<%= f.input :garment_id, :as => :select, 
-					collection: options_for_select( Garment.all.map{ |i| [i.name, i.id] }.sort_by{|e| e}, 
-					[Garment.find(params[:populate_garment_id]).name, params[:populate_garment_id]] ) %>
-		<% elsif params[:id] %>
-			<div class="item_form_info">
-				<b>BRAND:</b> <%= Item.find(params[:id]).garment.brand %>
-			</div>
-			<div class="item_form_info">
-				<b>MODEL:</b> <%= Item.find(params[:id]).garment.name %>
-			</div>
-			<div class="item_form_info">
-				<b>FABRIC ORIGIN:</b> <%= Item.find(params[:id]).garment.fabric_origin %>
+				<b>FABRIC ORIGIN:</b> <%= Garment.find(garment_id).fabric_origin %>
 			</div>
 
 			<%= f.input :garment_id, :as => :select, 
-					collection: options_for_select( Garment.all.map{ |i| [i.name, i.id] }.sort_by{|e| e}, 
-					[Item.find(params[:id]).garment.name, Item.find(params[:id]).garment.id] ) %>
+					collection: options_for_select( Garment.all.map{ |i| [i.name, i.id] }.sort_by{|e| e},
+					[Garment.find(garment_id).name, garment_id] ) %>
 		<% else %>
 			<%= f.input :garment_id, :as => :select, 
 					collection: options_for_select( Garment.all.map{ |i| [i.name, i.id] }.sort_by{|e| e},
@@ -35,12 +25,17 @@
 		<% end %>
 	<% end %>
 
-	<% if params[:populate_garment_id] && Garment.find(params[:populate_garment_id]).measurements_url %>
+	<% if garment_id.present? %>
 		<%= f.inputs "Url for other measurements" do %>
-		
-			<% link_to Garment.find(params[:populate_garment_id]).measurements_url, 
-						Garment.find(params[:populate_garment_id]).measurements_url,
+			<% if Garment.find(garment_id).measurements_url.present? %>
+				MEASUREMENTS URL: <%= link_to Garment.find(garment_id).measurements_url, 
+						Garment.find(garment_id).measurements_url,
 						:target => "_blank" %>
+			<% else %>
+				URL: <%= link_to Garment.find(garment_id).url, 
+						Garment.find(garment_id).url,
+						:target => "_blank" %>
+			<% end %>
 		<% end %>
 	<% end %>
 	

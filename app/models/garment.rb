@@ -3,7 +3,8 @@ class Garment < ActiveRecord::Base
 
 	has_many :items, dependent: :destroy
 
-	search_method :items_exist_eq
+	search_method :jeans_exist_eq
+	search_method :to_be_populated_eq
 
 	validates :name, presence: true
 	validates :brand, presence: true
@@ -21,11 +22,21 @@ class Garment < ActiveRecord::Base
 
 	private
 
-	def self.items_exist_eq(query)
+	def self.jeans_exist_eq(query)
 		if query == "yes"
 			includes(:items).where('items.garment_id IS NOT NULL')
 		elsif query == "no"
 			includes(:items).where(:items => {:garment_id=>nil})
+		else
+			scoped
+		end
+	end
+
+	def self.to_be_populated_eq(query)
+		if query == "yes"
+			where("tag_size_empty IS NOT NULL and tag_size_empty != '' ")
+		elsif query == "no"
+			where("tag_size_empty IS NULL or tag_size_empty = '' ")
 		else
 			scoped
 		end

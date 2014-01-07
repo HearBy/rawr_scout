@@ -36,7 +36,7 @@ describe "Authentication" do
 			it { should have_link("30", :href => "/admin/items/new?populate_garment_id=#{@garment.id}&tag_size=30") }
 			it { should have_link("32", :href => "/admin/items/new?populate_garment_id=#{@garment.id}&tag_size=32") }
 
-			describe "with tag_size_empty set to '' it should still say Populated" do
+			describe "with tag_size_empty set to '' it should still say None" do
 				before do
 					@garment.update_attributes(tag_size_empty: "")
 					visit admin_garments_path
@@ -44,7 +44,7 @@ describe "Authentication" do
 
 				it { should_not have_link("30", :href => "/admin/items/new?populate_garment_id=#{@garment.id}&tag_size=30") }
 				it { should_not have_link("32", :href => "/admin/items/new?populate_garment_id=#{@garment.id}&tag_size=32") }
-				it { should have_content "Populated"}
+				it { should have_content "None"}
 			end
 		
 			describe "with no spaces should work" do
@@ -193,7 +193,7 @@ describe "Authentication" do
 			find_field('item_inseam').value.should == '30.0'
 		end
 
-		it { should_not have_selector('legend', text: 'Url for other measurements') }
+		it { should have_selector('legend', text: 'Url for other measurements') }
 		it { should have_selector('.item_form_info', text: "BRAND: #{@garment.brand}") }
 		it { should have_selector('.item_form_info', text: "MODEL: #{@garment.name}") }
 		it { should have_selector('.item_form_info', text: "FABRIC ORIGIN: #{@garment.fabric_origin}") }

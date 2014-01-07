@@ -1,7 +1,8 @@
 ActiveAdmin.register Garment do
   menu priority: 1
 
-  filter :items_exist, :as => :select, collection: [['Yes', 'yes'], ['No', 'no']]
+  filter :jeans_exist, :as => :select, collection: [['Yes', 'yes'], ['No', 'no']]
+  filter :to_be_populated, :as => :select, collection: [['Yes', 'yes'], ['No', 'no']]
   filter :brand, :as => :select
   filter :name, :as => :select
   filter :fabric_origin, :as => :select
@@ -42,11 +43,11 @@ ActiveAdmin.register Garment do
         h4("NONE", :class => "no_items")
       end
     end
-    column "Tag Size Empty" do |garment|
+    column "To Be Populated" do |garment|
       if garment.tag_size_empty.present?
         raw(garment.tag_size_empty.gsub(' ', '').split(',').map {|size| link_to size, new_admin_item_path(:populate_garment_id => garment.id, :tag_size => size)}.join(', '))
       else
-        "Populated"
+        "None"
       end
     end
     column :fabric_origin
