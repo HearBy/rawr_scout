@@ -75,6 +75,20 @@ describe "Authentication" do
 				it { should have_selector('.item_form_info', text: "MODEL: #{@garment.name}") }
 				it { should have_selector('.item_form_info', text: "FABRIC ORIGIN: #{@garment.fabric_origin}") }
 				it { should have_link(@garment.measurements_url)}
+
+				describe "with an error, it should keep both tag_size and garment selected" do
+					before do
+						click_button "Create Item"
+					end
+
+					it "should have @garment.name preselected" do
+						expect(page).to have_select('item_garment_id', selected: @garment.name)
+					end
+
+					it "should have the tag_size form field prepopulated" do
+						find_field('item_tag_size').value.should == '32'
+					end
+				end
 			end
 
 			describe "remove size after adding item to database" do
@@ -113,7 +127,7 @@ describe "Authentication" do
 			find_field('item_tag_size').value.should == nil
 		end
 
-		it { should have_selector('legend', text: 'Url for other measurements') }
+		it { should_not have_selector('legend', text: 'Url for other measurements') }
 		it { should_not have_selector('.item_form_info', text: "BRAND:") }
 		it { should_not have_selector('.item_form_info', text: "MODEL:") }
 		it { should_not have_selector('.item_form_info', text: "FABRIC ORIGIN:") }
@@ -167,7 +181,7 @@ describe "Authentication" do
 			find_field('item_inseam').value.should == '30.0'
 		end
 
-		it { should have_selector('legend', text: 'Url for other measurements') }
+		it { should_not have_selector('legend', text: 'Url for other measurements') }
 		it { should have_selector('.item_form_info', text: "BRAND: #{@garment.brand}") }
 		it { should have_selector('.item_form_info', text: "MODEL: #{@garment.name}") }
 		it { should have_selector('.item_form_info', text: "FABRIC ORIGIN: #{@garment.fabric_origin}") }

@@ -35,8 +35,9 @@
 		<% end %>
 	<% end %>
 
-	<%= f.inputs "Url for other measurements" do %>
-		<% if params[:populate_garment_id] && Garment.find(params[:populate_garment_id]).measurements_url %>
+	<% if params[:populate_garment_id] && Garment.find(params[:populate_garment_id]).measurements_url %>
+		<%= f.inputs "Url for other measurements" do %>
+		
 			<% link_to Garment.find(params[:populate_garment_id]).measurements_url, 
 						Garment.find(params[:populate_garment_id]).measurements_url,
 						:target => "_blank" %>
