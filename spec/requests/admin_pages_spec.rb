@@ -91,7 +91,7 @@ describe "Authentication" do
 				end
 			end
 
-			describe "remove size after adding item to database" do
+			describe "remove tag_size_empty size after adding item to database" do
 				before do
 					click_link '32'
 					fill_in 'item_waist', with: 32
@@ -106,6 +106,18 @@ describe "Authentication" do
 				it { should have_selector(".current", text: "Garments") }
 				it { should have_link("30", :href => "/admin/items/new?populate_garment_id=#{@garment.id}&tag_size=30") }
 				it { should_not have_link("32", :href => "/admin/items/new?populate_garment_id=#{@garment.id}&tag_size=32") }
+			end
+
+			describe "don't remove tag_size_empty size after create item error" do
+				before do
+					click_link '32'
+					click_button "Create Item"
+					click_link "Garments"
+				end
+
+				it { should have_selector(".current", text: "Garments") }
+				it { should have_link("30", :href => "/admin/items/new?populate_garment_id=#{@garment.id}&tag_size=30") }
+				it { should have_link("32", :href => "/admin/items/new?populate_garment_id=#{@garment.id}&tag_size=32") }
 			end
 		end
 	end
