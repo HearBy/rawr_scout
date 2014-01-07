@@ -25,13 +25,22 @@ ActiveAdmin.register Garment do
 
     def update
       update! do |format|
+        if @garment.tag_size_empty == ""
+          @garment.update_attributes(tag_size_empty: nil)
+        end
+
         format.html { redirect_to session.delete(:return_to) }
       end
     end
   end
 
+  config.sort_order = "tag_size_empty_asc"
+
   index do
-    selectable_column
+    if current_active_admin_user.role == "admin" 
+      selectable_column
+    end
+
     column :name, :sortable => :name do |garment|
       link_to garment.name, [:admin, garment]
     end

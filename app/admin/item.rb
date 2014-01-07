@@ -31,7 +31,13 @@ ActiveAdmin.register Item do
             new_size = params[:item][:tag_size].gsub(' ', '').split(',')
             new_empty_sizes = (empty_sizes - new_size).join(', ')
 
-            Garment.find(params[:item][:garment_id]).update_attributes(tag_size_empty: new_empty_sizes)
+            if new_empty_sizes == ""
+              final = nil
+            else
+              final = new_empty_sizes
+            end
+
+            Garment.find(params[:item][:garment_id]).update_attributes(tag_size_empty: final)
           end
 
           format.html { redirect_to session.delete(:return_to) }
@@ -62,7 +68,9 @@ ActiveAdmin.register Item do
   filter :tag_size
 
   index do
-    selectable_column
+    if current_active_admin_user.role == "admin" 
+      selectable_column
+    end
     column "Brand", sortable: 'garments.brand' do |item|
       item.garment.brand
     end
